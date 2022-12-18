@@ -1,16 +1,14 @@
+
+import Part from "./Part"
+
 const Content = (props) => {
     return (
-      <div>
-        <p>
-          {props.part1} {props.exercises1}
-        </p>
-        <p>
-          {props.part2} {props.exercises2}
-        </p>
-        <p>
-          {props.part3} {props.exercises3}
-        </p>
-      </div>
+    //  
+    <div>
+      {props.parts.map((part) => (
+        <Part key={part.name} name={part.name} exercises={part.exercises} />
+      ))}
+    </div>
     )
   }
   export default Content
